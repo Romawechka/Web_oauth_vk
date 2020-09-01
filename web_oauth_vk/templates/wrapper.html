@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Webim the best!</title>
+    {% load static %}
+    <link rel = 'stylesheet' href="{% static 'css/main.css'%}">
+    <link rel = 'shortcut icon' type="image/png" href="{% static 'SomeIcon.png'%}">
+    {% block head %}
+    {% endblock %}
+</head>
+<body>
+    <dive class="Page">
+        <header class="Name-content">
+            <dive class="Top back">
+                <dive class="Top logo">
+                   <a href="/" class="bu ">{% include 'mainApp/includes/Someinclude.html'%}</a>
+                </dive>
+            </dive>
+        </header>
+        <main>
+        {% block content %}
+        {% endblock %}
+        </main>
+    </dive>
+</body>
+</html>

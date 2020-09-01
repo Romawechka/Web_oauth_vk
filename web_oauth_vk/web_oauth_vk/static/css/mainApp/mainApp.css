@@ -1,0 +1,42 @@
+.star{
+    background-image: url('star.svg');
+    display: inline-block;
+    width: 18px;
+    height: 20px;
+}
+
+.colorrito {
+    position: absolute;
+}
+
+.colorbar_active {
+    height: 20px;
+    background: orange;
+    display: inline-block;
+}
+
+.colorbar_negative {
+    background: #9b9b9b;
+    height: 20px;
+    display: inline-block;
+}
+
+.star_holder {
+    position: relative;
+    width: 180px;
+    height: 20px;
+}
+
+.positioner {
+    position: relative;
+    margin: 0 auto;
+    width: 180px;
+}
+
+.star:hover::after{
+    content: attr(data-tooltip);
+    z-index: 9999;
+	position: absolute;
+	width: 200px;
+	top: -15px;
+}

@@ -1,0 +1,149 @@
+* {
+    box-sizing: border-box
+}
+
+.reftext{
+    text-decoration: none;
+}
+
+
+.Name-content{
+    height: 50px;
+    background: #66846b;
+    position: fixed;
+    top: 0 !important;
+    width: 100%;
+    z-index: 1;
+}
+
+.Top{
+    display: inline-block;
+
+}
+
+.toolbox{
+    position: relative;
+    top: 3px;
+    float: right;
+}
+
+.logo{
+    float: left;
+}
+
+.back{
+    max-width: 81.7rem;
+    margin: 0 auto;
+    height: 50px;
+    display: block;
+}
+
+body{
+    margin: 0;
+}
+
+.Page{
+    background: #e3e8e3;
+    display: block;
+    padding-top: 150px;
+    min-height: 100vh;
+}
+
+main{
+    margin: 0px auto 0;
+    background: white;
+    min-height: 75vh;
+    height: auto;
+    border-radius: 10px;
+    max-width: 81.7rem;
+}
+
+.content_block{
+    display: block;
+    padding: 0 4%;
+}
+
+.title{
+    font-family: Lilita_One_Rus;
+    font-size: 3.1rem;
+    text-align: center;
+    margin: 0 0 4rem;
+    padding-top: 1rem;
+}
+
+.content_text{
+    font-family: Ritalin_Bold;
+    font-size: 1.7rem;
+    color: black;
+    text-indent: 2.5rem;
+    line-height: 1.5;
+}
+
+.text_href{
+    text-decoration:none;
+    color: #66846b;
+}
+
+a.buttons {
+  position: relative;
+  display: inline-block;
+  font-size: 18px;
+  font-weight: bold;
+  color: hsl(88, 70%, 30%);
+  text-shadow: rgba(255,255,255,.5) 0 -1px 0, rgba(0,0,0,.2) 0 .18em .15em;
+  text-decoration: none;
+  user-select: none;
+  padding: 7px 10px 7px 10px;
+  border-radius: 8px;
+  border-top: 1px solid rgba(255,255,255,.1);
+  border-bottom: 1px solid rgba(0,0,0,.1);
+  outline: none;
+  background: #a2cf70 radial-gradient(rgba(255,255,255,0), rgba(255,255,255,.5));
+  box-shadow:
+   inset rgba(255,255,255,.6) 0 .3em .3em,
+   inset rgba(0,0,0,.2) 0 -.1em .3em,
+   rgb(128,161,103) 0 7px 1px,
+   rgba(0,0,0,.2) 0 .5em 5px;
+  transition: background .2s ease-in-out;
+}
+a.buttons:hover {
+  background-color: hsl(88, 70%, 75%);
+}
+a.buttons:active {
+  top: .2em;
+  color: rgba(254,255,255,.9);
+  text-shadow: rgba(0,0,0,.2) 0 1px 2px;
+  box-shadow:
+   inset rgba(255,255,255,.6) 0 .3em .3em,
+   inset rgba(0,0,0,.2) 0 -.1em .3em,
+   rgba(0,0,0,.4) 0 .1em 1px,
+   rgba(0,0,0,.3) 0 .2em 6px;
+}
+a.buttons:after {
+  content:  "";
+  position:  absolute;
+  width:   90%;
+  height:  60%;
+  top:   0;
+  left:   5%;
+  border-radius:    .5em .5em 1em 1em / .5em .5em 2em 2em;
+  background-
+  image: linear-gradient(rgba(255,255,255,.55), rgba(255,255,255,.3));
+}
+a.buttons:active:after {
+  opacity: .6;
+}
+
+
+
+@font-face
+  {
+  font-family: Lilita_One_Rus;
+  src: url("fonts/Lilita_One_Russian.ttf");
+  }
+ 
+@font-face
+  {
+  font-family: Ritalin_Bold;
+  src: url("fonts/Ritalin_Bold.ttf");
+  }

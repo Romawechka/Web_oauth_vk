@@ -1,0 +1,49 @@
+{% extends 'wrapper.html'%}
+
+{% load i18n %}
+
+{% block head %}
+    {% load static %}
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <link rel = 'stylesheet' href="{% static 'css/me/me.css'%}">
+{% endblock %}
+
+{% block content %}
+        {% if user.is_authenticated %}
+            <h1 class="username">{{user.first_name}} {{user.last_name}}</h1>
+            <dive class="friends">
+            </dive>
+            <form method="post" action="{% url 'account_logout' %}">
+              {% csrf_token %}
+              {% if redirect_field_value %}
+              <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}"/>
+              {% endif %}
+              <button type="submit">{% trans 'Выйти' %}</button>
+            </form>
+            <script>
+                    user_name = "{{user.username}}";
+                    $.ajax({
+                        url: '',
+                        method: 'GET',
+                        headers: {'X-Requested-With': 'XMLHttpRequest'},
+                        data:{
+                        'username': user_name
+                        },
+	                    success: function(data){
+	                        data = $.parseJSON(data);
+	                        $.each(data, function(index, data){
+                                $('.friends').append('<dive class="friend"><a href="https://vk.com/id'+data['response'][0]['id']+'">\
+                                <Img src="'+data['response'][0]['photo_50']+'" Width="50" Height="50"></a>\
+                                <a class="sss" href="https://vk.com/id'+data['response'][0]['id']+'">'+data['response'][0]['first_name']+' '+data['response'][0]['last_name']+'</a>\
+                                </dive>');
+                            });
+	                    }
+                    })
+
+            </script>
+        {% else %}
+            <dive class="avt_bt">
+                <button onclick="window.location.href = '/vk'">авторизоваться</button>
+            </dive>
+        {% endif %}
+{% endblock %}

@@ -1,0 +1,79 @@
+.Title{
+    text-align: center;
+    padding-top: 3rem;
+    font-family: 'Roboto-Medium' !important;
+    margin: 0 ;
+}
+
+.form_log {
+    display: block;
+    margin: 0 30%;
+    width: 40%;
+    margin-top: 4rem;
+    padding: 2rem;
+    border-left-width: 1px;
+    border-left-style: solid;
+    border-top-width: 1px;
+    border-top-style: solid;
+    border-right-width: 1px;
+    border-right-style: solid;
+    border-bottom-width: 1px;
+    border-bottom-style: solid;
+    border-color: #42b342;
+    border-radius: 5px;
+}
+
+p{
+    font-family: 'Roboto-Regular';
+    width: 70%;
+}
+
+a.text{
+    font-family: 'Roboto-Medium' !important;
+    color: black;
+}
+
+.question{
+    width: auto;
+}
+
+input {
+    float: right;
+    border-radius: 5px;
+    border-left-width: 2px;
+    border-left-style: solid;
+    border-top-width: 2px;
+    border-top-style: solid;
+    border-right-width: 2px;
+    border-right-style: solid;
+    border-bottom-width: 2px;
+    border-bottom-style: solid;
+}
+
+.g-recaptcha {
+    margin: 2% 25%;
+    font-size: 16px;
+    background-color: #a7db8f;
+    height: 2rem;
+    width: 6rem;
+    border-radius: 5px;
+}
+
+.g-recaptcha:hover {
+  background-color: hsl(88, 70%, 75%);
+}
+
+.text{
+    font-family: 'Roboto-Regular';
+    text-decoration: none;
+}
+
+@font-face {
+    font-family: 'Roboto-Regular';
+    src: url("fonts/Roboto-Regular.ttf");
+}
+
+@font-face {
+    font-family: 'Roboto-Medium';
+    src: url("fonts/Roboto-Medium.ttf");
+}
